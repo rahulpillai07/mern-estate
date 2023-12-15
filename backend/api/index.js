@@ -1,6 +1,9 @@
 import express from 'express';
+import connect from '../dbConfig/index.js';
+
 
 const app=express();
+connect();
 
 app.get('/',(req,res)=>{
     res.send('hello from the / route')
