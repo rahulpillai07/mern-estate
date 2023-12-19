@@ -42,6 +42,7 @@ const SignUp = () => {
     } catch (error) {
       // Handle errors (e.g., network error, server error)
       console.error("Error:", error);
+      
     }
     setLoading(false);
   };
