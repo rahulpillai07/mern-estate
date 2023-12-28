@@ -3,7 +3,9 @@ import connect from "../dbConfig/index.js";
 import userRouter from "../routes/user.route.js";
 import authRouter from "../routes/auth.route.js";
 import cors from 'cors';
-import cookieParser from "cookie-parser";
+import cookieParser from "cookie-parser"
+
+
 const app = express();
 connect();
 

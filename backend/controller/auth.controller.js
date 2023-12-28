@@ -81,7 +81,7 @@ export const signin = async (req, res, next) => {
       console.log(checkUser._doc)
 
       return res
-        .cookie("access_token", token, { httpOnly: true })
+        .cookie("accessToken", token, { httpOnly: true })
         .status(200)
         .json({
           message: "Sign in successful",
@@ -103,7 +103,7 @@ export const google = async (req, res, next) => {
       console.log(token);
       const { password:pass, ...rest } = user._doc;
       res
-        .cookie("acess token", token, { httpOnly: true })
+        .cookie("accessToken", token, { httpOnly: true })
         .status(200)
         .json(rest);
     } else {
@@ -120,7 +120,7 @@ export const google = async (req, res, next) => {
       await newUser.save();
       const { password: pass, ...rest } = newUser._doc;
       res
-        .cookie("acess token", token, { httpOnly: true })
+        .cookie("accessToken", token, { httpOnly: true })
         .status(200)
         .json(rest);
       res;
